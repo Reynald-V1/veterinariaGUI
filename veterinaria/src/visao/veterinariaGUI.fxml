@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.VetController">
+   <top>
+      <AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #3a6d39;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="ExcludeFunc" prefHeight="401.0" prefWidth="502.0" visible="false">
+               <children>
+                  <TextField fx:id="CPFfuncExclude" layoutX="177.0" layoutY="176.0" promptText="CPF do funcionario" />
+                  <Button fx:id="ExcluirFuncok" layoutX="194.0" layoutY="220.0" mnemonicParsing="false" onAction="#ExcluirFuncionario" style="-fx-background-color: #5a9256;" text="excluir funcionario" textFill="WHITE" />
+                  <Text fill="WHITE" layoutX="125.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Excluir funcionario" textAlignment="CENTER">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="voltar7" layoutX="228.0" layoutY="262.0" mnemonicParsing="false" onAction="#voltar" style="-fx-background-color: #5a9256;" text="voltar" textFill="WHITE" />
+                  <Text fx:id="ErroDeletarFuncionario" fill="WHITE" layoutX="181.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" textAlignment="CENTER" visible="false" wrappingWidth="139.603515625">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ClienRegistrar" prefHeight="400.0" prefWidth="502.0" visible="false">
+               <children>
+                  <TextField fx:id="NomeClien" layoutX="14.0" layoutY="76.0" promptText="nome" />
+                  <TextField fx:id="NascimentoClien" layoutX="14.0" layoutY="116.0" prefHeight="25.0" prefWidth="156.0" promptText="nascimento[aaaa-mm-dd]" />
+                  <TextField fx:id="CPFclien" layoutX="14.0" layoutY="157.0" promptText="CPF" />
+                  <TextField fx:id="TelClien" layoutX="15.0" layoutY="201.0" promptText="telefone" />
+                  <TextField fx:id="NomeAnim" layoutX="320.0" layoutY="76.0" promptText="nome animal" />
+                  <TextField fx:id="NascimentoAnim" layoutX="320.0" layoutY="116.0" prefHeight="25.0" prefWidth="157.0" promptText="nascimento[aaaa-mm-dd]" />
+                  <TextField fx:id="raça" layoutX="320.0" layoutY="157.0" promptText="raça" />
+                  <TextField fx:id="especie" layoutX="320.0" layoutY="201.0" promptText="especie" />
+                  <TextField fx:id="estado" layoutX="320.0" layoutY="242.0" promptText="estado [doente, ferido]" />
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="89.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insira as informações" textAlignment="CENTER" wrappingWidth="306.20703125">
+                     <font>
+                        <Font name="Calibri Light Italic" size="36.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="ok_clien" layoutX="269.0" layoutY="340.0" mnemonicParsing="false" onAction="#CadastrarClienOk" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #5a9256;" text="ok" textFill="WHITE" />
+                  <Button fx:id="voltarClien" layoutX="113.0" layoutY="340.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #5a9256;" text="voltar" textFill="WHITE" />
+                  <Text fx:id="erroClien" fill="WHITE" layoutX="144.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="196.40625">
+                     <font>
+                        <Font name="Calibri Light Italic" size="22.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="SexoAnim" layoutX="320.0" layoutY="286.0" promptText="Sexo animal M | F" />
+                  <TextField fx:id="SexoClien" layoutX="14.0" layoutY="242.0" promptText="seu sexo M | F" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="menu" prefHeight="400.0" prefWidth="500.0">
+               <children>
+                  <ImageView blendMode="OVERLAY" fitHeight="400.0" fitWidth="502.0" layoutY="1.0">
+                     <image>
+                        <Image url="@../../../../1155041.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Dadoclien" blendMode="HARD_LIGHT" layoutX="32.0" layoutY="123.0" mnemonicParsing="false" onAction="#DadosClien" style="-fx-background-color: #5a9256;" text="dados de clientes" textFill="WHITE" />
+                  <Button fx:id="Dadofunc" blendMode="HARD_LIGHT" layoutX="32.0" layoutY="88.0" mnemonicParsing="false" onAction="#dadosFunc" style="-fx-background-color: #5a9256;" text="dados de funcionarios" textFill="WHITE" />
+                  <Button fx:id="CDclienteanimal" blendMode="HARD_LIGHT" layoutX="264.0" layoutY="319.0" mnemonicParsing="false" onAction="#ClienCadastro" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #5a9256;" text="cadastrar cliente e animal" textFill="WHITE" />
+                  <Button fx:id="CDfunc" blendMode="HARD_LIGHT" layoutX="112.0" layoutY="319.0" mnemonicParsing="false" onAction="#FuncCadastro" style="-fx-background-color: #5a9256;" text="cadastrar funcionario" textFill="WHITE" />
+                  <Button fx:id="BuscFuncionario" blendMode="HARD_LIGHT" layoutX="33.0" layoutY="247.0" mnemonicParsing="false" onAction="#buscarFunc" style="-fx-background-color: #5a9256;" text="buscar funcionario" textFill="WHITE" />
+                  <Button fx:id="BuscCliente" blendMode="HARD_LIGHT" layoutX="34.0" layoutY="212.0" mnemonicParsing="false" onAction="#ProcurarCliente" style="-fx-background-color: #5a9256;" text="Buscar cliente e animal" textFill="WHITE" />
+                  <Button fx:id="DelCliente" blendMode="HARD_LIGHT" layoutX="397.0" layoutY="212.0" mnemonicParsing="false" onAction="#ExcluirClienteMenu" style="-fx-background-color: #5a9256;" text="apagar cliente" textFill="WHITE" />
+                  <Button fx:id="DelFuncionario" blendMode="HARD_LIGHT" layoutX="372.0" layoutY="247.0" mnemonicParsing="false" onAction="#excluirFuncTela" style="-fx-background-color: #5a9256;" text="apagar funcionario" textFill="WHITE" />
+                  <Button fx:id="AltFuncionario" blendMode="HARD_LIGHT" layoutX="374.0" layoutY="88.0" mnemonicParsing="false" style="-fx-background-color: #5a9256;" text="alterar funcionario" textFill="WHITE" />
+                  <Button fx:id="AltCliente" blendMode="HARD_LIGHT" layoutX="399.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #5a9256;" text="alterar cliente" textFill="WHITE" />
+                  <Button fx:id="AltAnimal" blendMode="HARD_LIGHT" layoutX="399.0" layoutY="123.0" mnemonicParsing="false" style="-fx-background-color: #5a9256;" text="alterar animal" textFill="WHITE" />
+                  <Text blendMode="SCREEN" fill="#f2ff00" layoutX="61.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="꧁ঔৣ☬il vet del chevette☬ঔৣ꧂" textAlignment="CENTER" wrappingWidth="406.13671875">
+                     <font>
+                        <Font name="Gabriola" size="44.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="FuncRegistrar" prefHeight="400.0" prefWidth="500.0" visible="false">
+               <children>
+                  <TextField id="nomeFunc" fx:id="nome_func" layoutX="29.0" layoutY="64.0" promptText="nome" />
+                  <TextField id="CPFFunc" fx:id="CPF_func" layoutX="29.0" layoutY="104.0" promptText="CPF" />
+                  <TextField id="telefoneFunc" fx:id="telefone_func" layoutX="335.0" layoutY="64.0" promptText="telefone" />
+                  <TextField id="nascimentoFunc" fx:id="nascimento_func" layoutX="29.0" layoutY="175.0" promptText="nascimento " />
+                  <Text fx:id="erroCadFunc" fill="WHITE" layoutX="145.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="238.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
+                  <TextField id="salario" fx:id="salario" layoutX="335.0" layoutY="140.0" promptText="salario" />
+                  <TextField id="endereçoFunc" fx:id="endereço_func" layoutX="29.0" layoutY="140.0" promptText="endereço" />
+                  <TextField id="funcao" fx:id="função" layoutX="335.0" layoutY="104.0" promptText="função" />
+                  <Button fx:id="ok_func" layoutX="270.0" layoutY="330.0" mnemonicParsing="false" onAction="#cadastrarFuncOk" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #5a9256;" text="ok" textFill="WHITE" />
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="132.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preencha os campos">
+                     <font>
+                        <Font name="Calibri Light Italic" size="31.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="voltar" layoutX="143.0" layoutY="330.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #5a9256;" text="voltar" textFill="WHITE" />
+                  <TextField fx:id="SexoFunc" layoutX="335.0" layoutY="175.0" promptText="sexo M | F" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="RelatorioFunc" prefHeight="400.0" prefWidth="578.0" visible="false">
+               <children>
+                  <TableView fx:id="TBLfuncRelatorio" layoutY="80.0" prefHeight="200.0" prefWidth="618.0" style="-fx-background-color: #3a6d39;">
+                    <columns>
+                        <TableColumn fx:id="FuncTBLnome" prefWidth="97.0" text="nome" />
+                        <TableColumn fx:id="FuncTBLCPF" prefWidth="85.0" text="CPF" />
+                        <TableColumn fx:id="FuncTBLSexo" prefWidth="32.0" text="sexo" />
+                        <TableColumn fx:id="FuncTBLTelefone" text="telefone" />
+                      <TableColumn fx:id="FuncTBLEndereço" prefWidth="96.0" text="endereço" />
+                        <TableColumn fx:id="FuncTBLNascimento" prefWidth="86.0" text="nascimento" />
+                      <TableColumn fx:id="FuncTBLSalario" prefWidth="72.0" text="salario" />
+                        <TableColumn fx:id="FuncTBLFunção" prefWidth="76.0" text="função" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="voltar2" layoutX="272.0" layoutY="299.0" mnemonicParsing="false" onAction="#voltar" prefHeight="29.0" prefWidth="67.0" style="-fx-background-color: #5a9256;" text="voltar" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="RelatorioClien" prefHeight="401.0" prefWidth="618.0" visible="false">
+               <children>
+                  <TableView fx:id="TBLClienRelatorio" layoutY="51.0" prefHeight="264.0" prefWidth="618.0" style="-fx-background-color: #3a6d39;">
+                     <columns>
+                        <TableColumn fx:id="ClienTBLnome" prefWidth="126.0" text="Nome" />
+                        <TableColumn fx:id="ClienTBLCPF" prefWidth="116.0" text="CPF" />
+                        <TableColumn fx:id="ClienTBLsexo" prefWidth="53.0" text="Sexo" />
+                        <TableColumn fx:id="ClienTBLnascimento" prefWidth="144.0" text="Nascimento" />
+                        <TableColumn fx:id="ClienTBLtelefone" prefWidth="177.0" text="Telefone" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="voltar3" layoutX="272.0" layoutY="323.0" mnemonicParsing="false" onAction="#voltar" prefHeight="48.0" prefWidth="75.0" style="-fx-background-color: #3a6d19;" text="voltar" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pesquisaFuncionario" prefHeight="401.0" prefWidth="618.0" visible="false">
+               <children>
+                  <Text fx:id="ErroBuscarFuncionario" fill="WHITE" layoutX="255.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="124.4287109375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="TBLfuncPesquisa" prefHeight="85.0" prefWidth="618.0" style="-fx-background-color: #3a6d39;">
+                     <columns>
+                        <TableColumn fx:id="FuncTBLnomeP" prefWidth="97.0" text="nome" />
+                        <TableColumn fx:id="FuncTBLCPFP" prefWidth="85.0" text="CPF" />
+                        <TableColumn fx:id="FuncTBLSexoP" prefWidth="32.0" text="sexo" />
+                        <TableColumn fx:id="FuncTBLTelefoneP" text="telefone" />
+                        <TableColumn fx:id="FuncTBLEndereçoP" prefWidth="96.0" text="endereço" />
+                        <TableColumn fx:id="FuncTBLNascimentoP" prefWidth="86.0" text="nascimento" />
+                        <TableColumn fx:id="FuncTBLSalarioP" prefWidth="72.0" text="salario" />
+                        <TableColumn fx:id="FuncTBLFunçãoP" prefWidth="76.0" text="função" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="CPFbuscFunc" layoutX="243.0" layoutY="201.0" onAction="#PesquisaFunc" promptText="CPF para busca" />
+                  <Button fx:id="BuscaFuncionario" blendMode="HARD_LIGHT" layoutX="261.0" layoutY="241.0" mnemonicParsing="false" onAction="#PesquisaFunc" style="-fx-background-color: #5a9256;" text="buscar funcionario" textFill="WHITE" />
+                  <Button fx:id="voltar5" blendMode="HARD_LIGHT" layoutX="280.0" layoutY="280.0" mnemonicParsing="false" onAction="#voltar" prefHeight="19.0" prefWidth="75.0" style="-fx-background-color: #5a9256;" text="voltar" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pesqClien" prefHeight="401.0" prefWidth="618.0" visible="false">
+               <children>
+                  <Button fx:id="BuscarClien" blendMode="HARD_LIGHT" layoutX="255.0" layoutY="273.0" mnemonicParsing="false" onAction="#PesquisaClien" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #5a9256;" text="Buscar Cliente" textFill="WHITE" />
+                  <TableView fx:id="TBLClienPesquisa" prefHeight="76.0" prefWidth="618.0" style="-fx-background-color: #3a6d39;">
+                     <columns>
+                        <TableColumn fx:id="ClienTBLCPFP" prefWidth="116.0" text="CPF" />
+                        <TableColumn fx:id="ClienTBLsexoP" prefWidth="53.0" text="Sexo" />
+                        <TableColumn fx:id="ClienTBLnascimentoP" prefWidth="144.0" text="Nascimento" />
+                        <TableColumn fx:id="ClienTBLtelefoneP" prefWidth="177.0" text="Telefone" />
+                        <TableColumn fx:id="ClienTBLnomeP" prefWidth="126.0" text="Nome" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="CPFbuscClien" layoutX="241.0" layoutY="235.0" promptText="CPF a ser procurado" />
+                  <TableView fx:id="AnimalPesquisa" layoutX="-2.0" layoutY="85.0" prefHeight="102.0" prefWidth="618.0" style="-fx-background-color: #3a6d39;">
+                    <columns>
+                      <TableColumn fx:id="nomeAnimP" prefWidth="93.0" text="CPF dono" />
+                      <TableColumn fx:id="nascimentoAnimP" prefWidth="90.0" text="sexo" />
+                        <TableColumn fx:id="raçaAnimP" prefWidth="88.0" text="Raça" />
+                        <TableColumn fx:id="especieAnimP" prefWidth="145.0" text="nascimento" />
+                        <TableColumn fx:id="sexoAnimP" prefWidth="98.0" text="especie" />
+                        <TableColumn fx:id="estadoP" prefWidth="103.0" text="Estado" />
+                        <TableColumn fx:id="CPFdonoP" minWidth="0.0" prefWidth="0.0" text="CPF dono" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="voltar4" blendMode="HARD_LIGHT" layoutX="278.0" layoutY="312.0" mnemonicParsing="false" onAction="#voltar" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #5a9256;" text="voltar" textAlignment="CENTER" textFill="WHITE" />
+                  <Text fx:id="ErroBuscaCliente" fill="WHITE" layoutX="241.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="148.13671875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ExcludeCliente" prefHeight="401.0" prefWidth="503.0" visible="false">
+               <children>
+                  <TextField fx:id="CPFclienteExclude" layoutX="177.0" layoutY="165.0" promptText="CPF do cliente" />
+                  <Text fill="WHITE" layoutX="125.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Excluir Cliente" textAlignment="CENTER" wrappingWidth="253.962890625">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="ExcluirCliente" layoutX="207.0" layoutY="214.0" mnemonicParsing="false" onAction="#ExcluirCliente" style="-fx-background-color: #5a9256;" text="Excluir cliente" textFill="WHITE" />
+                  <Button fx:id="voltar6" layoutX="228.0" layoutY="249.0" mnemonicParsing="false" onAction="#voltar" style="-fx-background-color: #5a9256;" text="voltar" textFill="WHITE" />
+                  <Text fx:id="ErroExcluirCliente" fill="WHITE" layoutX="6.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="491.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
